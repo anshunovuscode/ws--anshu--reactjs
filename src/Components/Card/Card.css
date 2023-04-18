@@ -1,0 +1,12 @@
+.card_main{
+    /* border: 1px solid grey; */
+    padding: 20px;
+}
+.image_Title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Title{
+    margin-left: 10px;
+}
