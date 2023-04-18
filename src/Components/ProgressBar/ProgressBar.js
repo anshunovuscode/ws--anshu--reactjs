@@ -1,6 +1,6 @@
 import React from 'react'
   
-const ProgressBar = ({progress,height}) => {
+const ProgressBar = ({progress, bgcolor}) => {
      
     const Parentdiv = {
         height: 30,
@@ -13,30 +13,35 @@ const ProgressBar = ({progress,height}) => {
         borderRadius: "5px",
         
       }
-      
       const Childdiv = {
         height: '100%',
         width: `${progress}%`,
-        backgroundColor: "#808080",
+        backgroundColor: bgcolor,
         textAlign: 'right',
         borderTopLeftRadius: '5px',
         borderBottomLeftRadius: '5px',
-      
+        zIndex: "10"
+      }
+      const Prog_per = {
+        zIndex: "100",
+        with: "100%",
+        textAlign: "right",
       }
       
-      const progresstext = {
-        padding: 10,
-        color: 'black',
-        fontWeight: 900
-      }
+      // const progresstext = {
+      //   padding: 10,
+      //   color: 'black',
+      //   fontWeight: 900
+      // }
         
     return (
     <div style={Parentdiv}>
       <div style={Childdiv}>
-        <span style={progresstext}></span>
+        {/* <span style={progresstext}></span> */}
       </div>
-      {/* <h4></h4> */}
+      <div style={Prog_per}>
       {`${progress}%`}
+      </div>
     </div>
     )
 }

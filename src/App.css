@@ -47,12 +47,14 @@
   background-color: #E5E4E2;
   font-size: 30px;
   padding-left: 10px;
+  cursor: pointer;
 }
 .Inc_Dec > .Dec{
   border: 0px;
   background-color: #E5E4E2;
   font-size: 30px;
   padding-right: 10px;
+  cursor: pointer;
 }
 .Vote_Data{
   display: flex;
@@ -77,6 +79,7 @@
   border-radius: 5px;
   border: 0px;
   margin-top: 10px;
+  cursor: pointer;
 }
 .Tip_Content{
   font-size: 10px;

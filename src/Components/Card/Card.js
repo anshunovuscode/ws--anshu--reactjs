@@ -10,7 +10,7 @@ const Card = (props) => {
            <h2 className='Title'>{props.Title} DRESS</h2>
         </div>
         <div>
-           <ProgressBar bgcolor="#808080" progress={props.ColorPer}/>
+           <ProgressBar bgcolor={props.color} progress={props.ColorPer}/>
         </div>
     </div>
   )

@@ -12,6 +12,10 @@ function App() {
   const [readMoreText, setReadMoreText] = useState(false);
   const [ColorTitle, setColorTitle] = useState("Yellow");
   const [Counter, setCounter] = useState(500);
+  // const [RedCounter, setRedCounter] = useState(500);
+  // const [BlackCounter, setBlackCounter] = useState(500);
+  // const [WhiteCounter, setWhiteCounter] = useState(500);
+  // const [GreenCounter, setGreenCounter] = useState(500);
   const [YellowData, setYellowData] = useState(10);
   const [RedData, setRedData] = useState(10);
   const [BlackData, setBlackData] = useState(10);
@@ -25,61 +29,65 @@ function App() {
   }
 
   const YellowHandler = () => {
-    setColorTitle("Yellow")
+    setColorTitle("Yellow");
+    setCounter(YellowData/100*5000);
   }
   const RedHandler = () => {
-    setColorTitle("Red")
+    setColorTitle("Red");
+    setCounter(RedData/100*5000);
   }
   const BlackHandler = () => {
-    setColorTitle("Black")
+    setColorTitle("Black");
+    setCounter(BlackData/100*5000);
   }
   const WhiteHandler = () => {
-    setColorTitle("White")
+    setColorTitle("White");
+    setCounter(WhiteData/100*5000);
   }
   const GreenHandler = () => {
-    setColorTitle("Green")
+    setColorTitle("Green");
+    setCounter(GreenData/100*5000);
   }
 
   const IncHandler = ()=>{
     if(Counter === 500) {
-      setCounter(1000)
+      setCounter(1000);
     }else if(Counter === 1000){
-       setCounter(1500)
+       setCounter(1500);
     }else if(Counter === 1500){
-      setCounter(2000)
+      setCounter(2000);
    }else if(Counter === 2000){
-    setCounter(5000)
+    setCounter(5000);
  }   
   }
 
   const DecHandler = ()=>{
     if(Counter === 5000){
-      setCounter(2000)
+      setCounter(2000);
     }else if(Counter === 2000){
-      setCounter(1500)
+      setCounter(1500);
     }else if(Counter === 1500){
-      setCounter(1000)
+      setCounter(1000);
     }else if(Counter === 1000){
-      setCounter(500)
+      setCounter(500);
     }
   }
     
   const VoteSubmitHandler = ()=>{
         if(ColorTitle === "Yellow"){
-          setYellowData(data)
+          setYellowData(data);
         }
         else if(ColorTitle === "Red"){
-          setRedData(data)
+          setRedData(data);
         }
         else if(ColorTitle === "Black"){
-          setBlackData(data)
+          setBlackData(data);
         }
         else if(ColorTitle === "White"){
-          setWhiteData(data)
+          setWhiteData(data);
         }
         else if(ColorTitle === "Green"){
-          setGreenData(data)
-          console.log(data)
+          setGreenData(data);
         }
   }
 
@@ -108,44 +116,44 @@ function App() {
             className={`${ColorTitle === "Yellow" ? "selected" : "Card_Wraper"
               }`}
             onClick={YellowHandler}>
-            <Card image={yellow} Title={"YELLOW"} ColorPer={YellowData}/>
+            <Card image={yellow} Title={"YELLOW"} color="yellow" ColorPer={YellowData}/>
           </div>
           <br />
           <div
             className={`${ColorTitle === "Red" ? "selected" : "Card_Wraper"
               }`}
             onClick={RedHandler}>
-            <Card image={Red} Title={"RED"} ColorPer={RedData}/>
+            <Card image={Red} Title={"RED"} color="red" ColorPer={RedData}/>
           </div>
           <br />
           <div
             className={`${ColorTitle === "Black" ? "selected" : "Card_Wraper"
               }`}
             onClick={BlackHandler}>
-            <Card image={Black} Title={"BLACK"} ColorPer={BlackData}/>
+            <Card image={Black} Title={"BLACK"} color="black" ColorPer={BlackData}/>
           </div>
           <br />
           <div
             className={`${ColorTitle === "White" ? "selected" : "Card_Wraper"
               }`}
             onClick={WhiteHandler}>
-            <Card image={White} Title={"WHITE"} ColorPer={WhiteData}/>
+            <Card image={White} Title={"WHITE"} color="orange" ColorPer={WhiteData}/>
           </div>
           <br />
           <div
             className={`${ColorTitle === "Green" ? "selected" : "Card_Wraper"
               }`}
             onClick={GreenHandler}>
-            <Card image={Green} Title={"GREEN"} ColorPer={GreenData}/>
+            <Card image={Green} Title={"GREEN"} color="green" ColorPer={GreenData}/>
           </div>
           <br />
         </div>
         <div className='Inc_Dec_Wrap'>
-          <h2>{ColorTitle} Dress</h2>
+          <h2 >{ColorTitle} Dress</h2>
           <div className='Inc_Dec'>
             <button className='Inc' onClick={DecHandler}>-</button>
             <div className='Vote_Data'>
-              <p>Vote Interest</p>
+              <p>Vote Amount</p>
               <h5>
                 {Counter}
               </h5>
