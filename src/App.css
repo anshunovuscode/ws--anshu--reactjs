@@ -5,6 +5,26 @@
   justify-content: center;
 
 }
+@media screen and (max-width: 424px) {
+    .NoSupport{
+      display: none;
+    }
+}
+@media screen and (min-width: 424px) {
+  .NoSupport{
+    display: block;
+  }
+}
+@media screen and (min-width: 425px) {
+  .main{
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .main{
+    display: block;
+  }
+}
 .main{
   max-width: 450px;
   border: 2px solid grey;

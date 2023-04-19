@@ -12,10 +12,6 @@ function App() {
   const [readMoreText, setReadMoreText] = useState(false);
   const [ColorTitle, setColorTitle] = useState("Yellow");
   const [Counter, setCounter] = useState(500);
-  // const [RedCounter, setRedCounter] = useState(500);
-  // const [BlackCounter, setBlackCounter] = useState(500);
-  // const [WhiteCounter, setWhiteCounter] = useState(500);
-  // const [GreenCounter, setGreenCounter] = useState(500);
   const [YellowData, setYellowData] = useState(10);
   const [RedData, setRedData] = useState(10);
   const [BlackData, setBlackData] = useState(10);
@@ -93,8 +89,11 @@ function App() {
 
   return (
     <div className="App">
+      <div className='NoSupport'>
+        <p>No desktop support</p>
+      </div>
       <div className='main'>
-        <h2>WHICH OUTFIT SHALL I WEAR NEXT?</h2>
+        <h4>WHICH OUTFIT SHALL I WEAR NEXT?</h4>
         <p>
           My next concert in berlin is totally sold out!
           You have now the change to win 2 of
