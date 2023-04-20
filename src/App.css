@@ -117,4 +117,10 @@
   padding: 0px;
   margin: 0px;
 }
+.Bulb-Tip{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 

@@ -7,6 +7,7 @@ import Black from './Assets/Black.jpg';
 import White from './Assets/White.png';
 import Green from './Assets/Green.png';
 import lightning from './Assets/lightning.png';
+import lightBulb from './Assets/light-bulb.png'
 
 function App() {
   const [readMore, setReadmore] = useState(false);
@@ -162,7 +163,10 @@ function App() {
             <button className='Dec' onClick={IncHandler}>+</button>
           </div>
           <button onClick={VoteSubmitHandler} className='Vote_Button'>Vote</button>
-          <p className='Tip_Content'>Tip: Use your Energy to boost your opinion</p>
+          <div className='Bulb-Tip'>
+            <img src={lightBulb} alt="bulb" width={13} height={13} />
+             <p className='Tip_Content'>Tip: Use your Energy to boost your opinion</p>
+          </div>
         </div>
       </div>
     </div>
