@@ -22,16 +22,6 @@ const ProgressBar = ({ progress, bgcolor }) => {
     borderTopLeftRadius: '5px',
     borderBottomLeftRadius: '5px',
   }
-  const Prog_per = {
-    with: "100%",
-    textAlign: "right",
-  }
-
-  // const progresstext = {
-  //   padding: 10,
-  //   color: 'black',
-  //   fontWeight: 900
-  // }
 
   return (
     <div style={Parentdiv}>
@@ -41,9 +31,9 @@ const ProgressBar = ({ progress, bgcolor }) => {
           {(progress / 100) * 5000}
         </div>
       </div>
-      <div style={Prog_per}>
+      <div style={{height:"100%",borderBottomRightRadius:'5px',borderTopRightRadius:'5px', backgroundColor: progress === 100 ? bgcolor : " "}}>
           {`${progress}%`}
-        </div>
+      </div>
     </div>
   )
 }
