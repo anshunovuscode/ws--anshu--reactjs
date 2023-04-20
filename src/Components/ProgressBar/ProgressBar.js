@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import './ProgressBar.css';
+import lightning from '../../Assets/lightning.png';
   
 const ProgressBar = ({progress, bgcolor}) => {
      
@@ -37,7 +39,10 @@ const ProgressBar = ({progress, bgcolor}) => {
     return (
     <div style={Parentdiv}>
       <div style={Childdiv}>
-        {/* <span style={progresstext}></span> */}
+        <div className='light_data'>
+         <img src={lightning} alt="" width={15} height={15}/>
+         {(progress/100)*5000}
+        </div>
       </div>
       <div style={Prog_per}>
       {`${progress}%`}

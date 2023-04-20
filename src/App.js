@@ -6,6 +6,7 @@ import Red from './Assets/Red.avif';
 import Black from './Assets/Black.jpg';
 import White from './Assets/White.png';
 import Green from './Assets/Green.png';
+import lightning from './Assets/lightning.png';
 
 function App() {
   const [readMore, setReadmore] = useState(false);
@@ -129,7 +130,7 @@ function App() {
             className={`${ColorTitle === "Black" ? "selected" : "Card_Wraper"
               }`}
             onClick={BlackHandler}>
-            <Card image={Black} Title={"BLACK"} color="black" ColorPer={BlackData}/>
+            <Card image={Black} Title={"BLACK"} color="purple" ColorPer={BlackData}/>
           </div>
           <br />
           <div
@@ -153,9 +154,10 @@ function App() {
             <button className='Inc' onClick={DecHandler}>-</button>
             <div className='Vote_Data'>
               <p>Vote Amount</p>
-              <h5>
-                {Counter}
-              </h5>
+              <div className='Light_Wraper'>
+                <img src={lightning} alt="" width={15} height={15}/>
+                <h5>{Counter}</h5>
+              </div>
             </div>
             <button className='Dec' onClick={IncHandler}>+</button>
           </div>

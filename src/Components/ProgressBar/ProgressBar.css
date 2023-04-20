@@ -1,0 +1,7 @@
+.light_data{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin-top: 2px;
+}
